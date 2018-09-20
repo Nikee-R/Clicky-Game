@@ -3,17 +3,18 @@ nav {
     font-size: 3rem;
     color: #fff;
     margin-bottom: 50px;
-    background-color: rgb(56, 56, 56);
+    background-color: rgb(255, 71, 172);
     height: auto;
-    font-family: 'Bungee', cursive;
+    font-family: 'Teko', sans-serif;
   }
   
   a {
-    color: #0f0f0f;
+    color: #fff;
+    font-size: 5rem;
   }
   
   a:hover {
-    color: #fe20b4;
+    color: rgb(104, 104, 104);
     text-decoration: none;
   }
   

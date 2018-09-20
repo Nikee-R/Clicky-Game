@@ -1,9 +1,11 @@
 .title {
   width: 100%;
   text-align: right;
-  font-size: 3rem;
-  color: rgb(255, 255, 255);
+  font-size: 5rem;
+  color: rgb(104, 104, 104);
   margin-bottom: 50px;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-left: 3%;
+  padding-right: 3%;
+  font-family: 'Teko', sans-serif;
+
 }
