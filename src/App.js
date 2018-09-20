@@ -16,11 +16,10 @@ import './App.css';
 
 class App extends Component {
   state = {
-    message: "Click an image to begin!",
     topScore: 0,
     score: 0,
     friends: friends,
-    unselected: friends
+    unselectedFriends: friends
   }
   componentDidMount() {
 
@@ -35,26 +34,25 @@ class App extends Component {
   }
 
   selectFriend = friend => {
-    const findFriend = this.state.unselected.find(item => item.friend === friend);
+    const findFriend = this.state.unselectedFriends.find(item => item.friend === friend);
 
     if (findFriend === undefined) {
       // Lose.
+      alert("You lose! Try again?");
       this.setState({
-        message: "You lose!",
         topScore: (this.state.score > this.state.topScore) ? this.state.score : this.state.topScore,
         score: 0,
         friends: friends,
-        unselected: friends
+        unselectedFriends: friends
       });
+      // Resumes until win.
     } else {
-      // Win!
-      const newFriends = this.state.unselected.filter(item => item.friend !== friend);
+      const newFriends = this.state.unselectedFriends.filter(item => item.friend !== friend);
 
       this.setState({
-        message: "You win!",
-        score: this.state.score + 1,
+        score: this.state.score + 100,
         friends: friends,
-        unselected: newFriends
+        unselectedFriends: newFriends
       });
     }
 
@@ -78,8 +76,8 @@ class App extends Component {
               {this.state.friends.map(friend => (
                 <Column size="md-3 sm-6">
                   <FriendCard
-                    friend={friends.friend}
-                    image={friends.image}
+                    friend={friend.friend}
+                    image={friend.image}
                     selectFriend={this.selectFriend}
                     score={this.state.score}
                     />
