@@ -5,7 +5,7 @@ const Navbar = props => (
     <nav>
         <ul>
             <li className="brand animated lightSpeedIn">
-                <a href="/cicky-game/">{props.title}</a>
+                <a href="/clicky-game/">{props.title}</a>
             </li>
 
             <li id="ci">{props.correctIncorrect}</li>
